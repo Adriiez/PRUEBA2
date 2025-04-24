@@ -17,7 +17,7 @@
 <div class="container">
     <div class="perfil">
         <div id="fecha"></div>
-        <h1>HOLA, EDGAR DEL VALLE  </h1>
+        <h1>HOLA  </h1>
         <span>THE BAD BOY</span>
     </div>
 
@@ -51,4 +51,56 @@
        
 </div>
 <h3>EAZY.CORP</h3>
+    <!DOCTYPE html>
+<html lang="es">
+    // Aqui empieza el cambio//
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suscripción</title>
+  <style>
+    .subscribe-button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px 30px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .subscribe-button:hover {
+      background-color: #45a049;
+    }
+
+    .subscribing {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Suscríbete a nuestro servicio</h2>
+  <button id="subscribeBtn" class="subscribe-button" onclick="handleSubscription()">Pagar Suscripción</button>
+
+  <script>
+    function handleSubscription() {
+      const button = document.getElementById('subscribeBtn');
+      button.disabled = true;
+      button.classList.add('subscribing');
+      button.textContent = 'Procesando...';
+
+      // Simulación de proceso de pago
+      setTimeout(() => {
+        alert('¡Suscripción completada con éxito!');
+        button.textContent = 'Suscrito';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
+
 </html>
